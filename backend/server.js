@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 import mongodb from "./db/mongodb.js";
 import cookieParser from "cookie-parser";
 import userRoutes from "./Routes/user.routes.js";
+import postRoutes from "./Routes/post.routes.js";
 
 import { v2 as cloudinary } from "cloudinary";
 
@@ -25,6 +26,7 @@ app.use(cookieParser())
 
 app.use("/api/auth",authRoutes);
 app.use("/api/users",userRoutes);
+app.use("/api/post",postRoutes)
 
 
 
